@@ -39,7 +39,8 @@ export default function NewProduct(props) {
         const newProduct = {
           productName: formValues.productName,
           productDescription: formValues.productDescription,
-          productPrice: formValues.productPrice
+          productPrice: formValues.productPrice,
+          
         }
 
         postNewProduct(newProduct);
@@ -72,7 +73,7 @@ export default function NewProduct(props) {
                     name="productPrice"
                     onChange={onChange}
                 />
-
+                
             </div>
             <button>Submit</button>
 
