@@ -2,21 +2,22 @@ const product1 = {
 
     productName: "Banana",
     productDescription: "Stuff and stuff",
-    productPrice: "$10"
-
+    productPrice: "$10",
+   
 }
 const product2 = {
 
     productName: "Banana",
     productDescription: "Stuff and stuff",
-    productPrice: "$10"
-
+    productPrice: "$10",
+    
 }
 const product3 = {
 
     productName: "Banana",
     productDescription: "Stuff and stuff",
-    productPrice: "$10"
+    productPrice: "$10",
+    
 
 }
 
@@ -40,7 +41,8 @@ export const signupInitialValues = {
 export const newInitialValues = {
     productName: "",
     productDescription: "",
-    productPrice: ""
+    productPrice: "",
+    
 
 }
 
