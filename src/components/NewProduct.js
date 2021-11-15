@@ -1,11 +1,13 @@
 import React, {useState} from "react";
-import {newInitialValues} from "../initialValues/InitialValues";
+import {newInitialValues, initialFormErrors} from "../initialValues/InitialValues";
 import axios from 'axios';
 
 export default function NewProduct(props) {
     const { setIsToggled, isToggled } = props;
     const [newProduct, setNewProduct] = useState(newInitialValues);
     const [formValues, setFormValues] = useState();
+
+
 
     const postNewProduct = (newProduct) => {
 

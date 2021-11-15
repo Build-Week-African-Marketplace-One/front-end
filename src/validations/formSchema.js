@@ -1,7 +1,7 @@
 
 import * as yup from "yup";
 
-export const formSchema = yup.object().shape({
+const formSchema = yup.object().shape({
     username: yup
                 .string()
                 .trim()
@@ -60,7 +60,7 @@ export const formSchema = yup.object().shape({
                 .required("A Location is required")
 })
 
-//wtf is going on
+export default formSchema;
 
 
 

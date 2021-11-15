@@ -1,18 +1,16 @@
 import React, { useState } from "react";
-import {Link, NavLink} from "react-router-dom";
-import styled from "styled-components";
 import {signupInitialValues} from "../initialValues/InitialValues";
 import "../styles/SignUp.css"
 import * as yup from 'yup';
 import { initialFormErrors } from '../initialValues/InitialValues';
-import { formSchema } from '../validations/formSchema';
+import  schema  from '../validations/formSchema';
 
 export default function SignUp() {
     const [formValues, setFormValues] = useState(signupInitialValues);
     const [formErrors, setFormErrors] = useState(initialFormErrors);
 
     const validation = (name, value) => {
-      yup.reach(formSchema, name)
+      yup.reach(schema, name)
       .validate(value)
       .then(() => {
         setFormErrors({...formErrors, [name]: ''});
