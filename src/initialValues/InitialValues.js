@@ -3,20 +3,21 @@ const product1 = {
     productName: "Banana",
     productDescription: "Stuff and stuff",
     productPrice: "$10",
-   
+    location: 'North Africa'
 }
 const product2 = {
 
     productName: "Banana",
     productDescription: "Stuff and stuff",
     productPrice: "$10",
-    
+    location: 'South Africa'
 }
 const product3 = {
 
     productName: "Banana",
     productDescription: "Stuff and stuff",
     productPrice: "$10",
+    location: 'Central Africa'
     
 
 }
@@ -42,7 +43,7 @@ export const newInitialValues = {
     productName: "",
     productDescription: "",
     productPrice: "",
-    
+    location: ""
 
 }
 
