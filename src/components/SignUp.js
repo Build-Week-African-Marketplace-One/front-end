@@ -3,11 +3,13 @@ import {Link, NavLink} from "react-router-dom";
 import styled from "styled-components";
 import {signupInitialValues} from "../initialValues/InitialValues";
 import "../styles/SignUp.css"
+import * as yup from 'yup';
+import { initialFormErrors } from '../initialValues/InitialValues';
 
 
 export default function SignUp() {
     const [formValues, setFormValues] = useState(signupInitialValues);
-
+    const [formErrors, setFormErrors] = useState(initialFormErrors);
 
     const onChange = evt => {
         console.log(evt.target.value)
@@ -91,50 +93,3 @@ export default function SignUp() {
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

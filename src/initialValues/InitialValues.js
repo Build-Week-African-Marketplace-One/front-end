@@ -44,43 +44,15 @@ export const newInitialValues = {
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+export const initialFormErrors = {
+  username: '',
+  firstName: '',
+  lastName: '',
+  businessName: '',
+  jobTitle: '',
+  avararImg: '',
+  password: '',
+  productName: '',
+  productDescription: '',
+  productPrice: ''
+}
