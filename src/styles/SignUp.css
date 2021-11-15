@@ -4,12 +4,19 @@
     align-items: center;
 }
 
+a:hover {
+    font-size: 1.2rem;
+}
 
+button {
+    background-color: transparent;
+    border: none;
+    color: lightgray;
+}
 
-
-
-
-
+button:hover {
+    font-size: 1rem;
+}
 
 
 

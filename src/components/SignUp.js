@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
+import styled from "styled-components";
 import {signupInitialValues} from "../initialValues/InitialValues";
 import "../styles/SignUp.css"
+
 
 export default function SignUp() {
     const [formValues, setFormValues] = useState(signupInitialValues);
@@ -26,9 +28,9 @@ export default function SignUp() {
             <form id="signup-form" onSubmit={onSubmit}>
                 <div className= "signup-header">
                     <h1>Create An Account</h1>
-                    <Link to="/login" style={{ textDecoration: 'none', color: 'lightgrey' }}>
+                    <a href="/login" style={{ textDecoration: 'none', color: 'lightgrey' }}>
                         Already have an account?
-                    </Link>
+                    </a>
                 </div>
                 <div className="signup-input-container">
                     <label htmlFor="username">Username:&nbsp;</label>
