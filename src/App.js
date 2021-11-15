@@ -1,6 +1,8 @@
 import './App.css';
 import React from "react";
 import { Route, Switch } from "react-router";
+
+import SignUp from "./components/SignUp";
 import Home from "./components/Home";
 import Header from "./components/Header";
 import Login from "./components/Login";
@@ -12,10 +14,11 @@ function App() {
     <div className="App">
       <Header/>
       <Switch>
-      <Route path="/user" component={User}/>
-      <Route path="/prices" component={Prices}/>
-      <Route path="/login" component={Login}/>
-      <Route path="/" component={Home}/>
+          <Route path="/user" component={User}/>
+          <Route path="signup" component={SignUp} />
+          <Route path="/prices" component={Prices}/>
+          <Route path="/login" component={Login}/>
+          <Route path="/" component={Home}/>
       </Switch>
     </div>
   );
