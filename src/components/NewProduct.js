@@ -1,11 +1,14 @@
 import React, {useState} from "react";
 import {newInitialValues, initialFormErrors} from "../initialValues/InitialValues";
 import axios from 'axios';
+import schema from "../validations/formSchema";
+import * as yup from "yup";
 
 export default function NewProduct(props) {
     const { setIsToggled, isToggled } = props;
     const [newProduct, setNewProduct] = useState(newInitialValues);
-    const [formValues, setFormValues] = useState();
+    const [formValues, setFormValues] = useState({});
+    const [formErrors, setFormErrors] = useState({})
 
 
 
@@ -25,11 +28,24 @@ export default function NewProduct(props) {
             });
     };
 
+    const validation = (name, value) => {
+        yup.reach(schema, name)
+            .validate(value)
+            .then(() => {
+                setFormErrors({...formErrors, [name]:""});
+            })
+            .catch(err => {
+                setFormErrors({...formErrors, [name]: err.errors[0]});
+            })
+    }
+
+
     const onChange = evt => {
         inputChange(evt.target.name, evt.target.value);
     };
 
     const inputChange = (name, value) => {
+        validation(name, value);
         setFormValues({
             ...formValues,
             [name]: value
@@ -55,6 +71,12 @@ export default function NewProduct(props) {
         <form className="new-product-container" onSubmit={onSubmit}>
             <div className="new-product-header">
                 <h2>Add New Product</h2>
+            </div>
+            <div className="new-product-errors">
+                <div>{formErrors.productName}</div>
+                <div>{formErrors.productDescription}</div>
+                <div>{formErrors.productPrice}</div>
+                <div>{formErrors.location}</div>
             </div>
             <div className="new-product-inputs">
                 <label htmlFor="productName">Product:&nbsp;</label>
