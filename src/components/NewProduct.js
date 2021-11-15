@@ -1,27 +1,51 @@
 import React, {useState} from "react";
 import {newInitialValues} from "../initialValues/InitialValues";
+import axios from 'axios';
 
-
-export default function NewProduct() {
+export default function NewProduct(props) {
+    const { setIsToggled, isToggled } = props;
     const [newProduct, setNewProduct] = useState(newInitialValues);
-
+    const [formValues, setFormValues] = useState();
     const onChange = evt => {
         inputChange(evt.target.name, evt.target.value)
+
     }
 
     const inputChange = (name, value) => {
-        setNewProduct({
-            ...newProduct,
+        setFormValues({
+            ...formValues,
             [name]: value
         })
-        console.log(newProduct);
+        console.log(formValues);
     }
 
     const onSubmit = evt =>{
         evt.preventDefault();
-        console.log(newProduct)
+        const newProduct = {
+          productName: formValues.productName,
+          productDescription: formValues.productDescription,
+          productPrice: formValues.productPrice
+        }
+
+        postNewProduct(newProduct);
     }
 
+    const postNewProduct = (newProduct) => {
+
+      axios.post('', newProduct)
+      .then(res => {
+        console.log(res);
+        setNewProduct(res.data);
+
+      })
+      .catch(err => {
+        console.error(err);
+      })
+      .finally(() =>{
+        setFormValues(newInitialValues);
+        setIsToggled(!isToggled);
+      })
+    }
 
 
     return(
@@ -57,49 +81,3 @@ export default function NewProduct() {
     )
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

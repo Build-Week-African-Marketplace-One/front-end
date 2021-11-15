@@ -20,54 +20,9 @@ export default function User(props) {
                 <button onClick={onClick}>New Product</button>
             </div>
         {
-            isToggled && <NewProduct/>
+            isToggled && <NewProduct setIsToggled={setIsToggled} isToggled={isToggled}/>
         }
         </div>
 
     )
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
