@@ -46,6 +46,15 @@ export default function SignUp() {
                     </a>
                 </div>
                 <div className="signup-input-container">
+                    <div className='form-errors'>
+                      <p>{formErrors.username}</p>
+                      <p>{formErrors.firstName}</p>
+                      <p>{formErrors.lastName}</p>
+                      <p>{formErrors.businessName}</p>
+                      <p>{formErrors.jobTitle}</p>
+                      <p>{formErrors.avatarImg}</p>
+                      <p>{formErrors.password}</p>
+                    </div>
                     <label htmlFor="username">Username:&nbsp;</label>
                         <input
                             type="text"

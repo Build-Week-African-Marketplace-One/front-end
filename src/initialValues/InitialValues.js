@@ -50,9 +50,10 @@ export const initialFormErrors = {
   lastName: '',
   businessName: '',
   jobTitle: '',
-  avararImg: '',
+  avatarImg: '',
   password: '',
   productName: '',
   productDescription: '',
-  productPrice: ''
+  productPrice: '',
+  location: ''
 }
