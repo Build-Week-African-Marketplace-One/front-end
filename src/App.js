@@ -9,17 +9,21 @@ import Login from "./components/Login";
 import Prices from "./components/Prices";
 import User from "./components/User";
 
+
 function App() {
+
+
+
   return (
     <div className="App">
       <Header/>
-      <Switch>
+        <Switch>
           <Route path="/user" component={User}/>
-          <Route path="signup" component={SignUp} />
+          <Route path="/signup" component={SignUp} />
           <Route path="/prices" component={Prices}/>
           <Route path="/login" component={Login}/>
-          <Route path="/" component={Home}/>
-      </Switch>
+          <Route exact path="/" component={Home}/>
+        </Switch>
     </div>
   );
 }

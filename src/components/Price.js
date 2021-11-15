@@ -4,7 +4,6 @@ import React from "react";
 
 export default function Price(props) {
     const {price} = props;
-    console.log(price)
 
     return(
         <div className="price-container">
@@ -12,12 +11,6 @@ export default function Price(props) {
             <p>{price.productPrice}</p>
         </div>
     )
-
-
-
-
-
-
 }
 
 

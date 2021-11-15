@@ -1,33 +1,22 @@
-import React, {useState} from "react";
+import React, { useState, useEffect } from "react";
+import { pricesInitialValues } from "../initialValues/InitialValues";
+import axios from "axios";
+
 import Price from "./Price";
 
-const product1 = {
 
-    productName: "Banana",
-        productPrice: "$10",
+export default function Prices() {
+    const [prices, setPrices] = useState(pricesInitialValues);
 
-}
-const product2 = {
-
-    productName: "Banana",
-        productPrice: "$10",
-
-}
-const product3 = {
-
-    productName: "Banana",
-        productPrice: "$10",
-
-}
-
-
-const initialValues = [product1, product2, product3]
-
-
-
-export default function Prices(props) {
-    const [prices, setPrices] = useState(initialValues);
-    const {} = props;
+    useEffect(() => {
+        axios.get("https://")
+            .then(res => {
+                setPrices(res.data)
+            })
+            .catch(err => {
+                console.error(err)
+            })
+    }, []);
 
 
     return(

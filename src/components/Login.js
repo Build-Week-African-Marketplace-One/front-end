@@ -1,17 +1,10 @@
 import React, {useState} from "react";
 import {useHistory} from "react-router";
 import axios from "axios";
-
-
-const initialValues = {
-    username: "",
-    password: ""
-};
-
-
+import {loginInitialValues} from "../initialValues/InitialValues";
 
 export default function Login() {
-    const [formValues, setFormValues] = useState(initialValues);
+    const [formValues, setFormValues] = useState(loginInitialValues);
     const { push } = useHistory()
 
     const onChange = evt => {
@@ -19,7 +12,6 @@ export default function Login() {
             ...formValues,
             [evt.target.name]: evt.target.value
         });
-        console.log(formValues);
     };
 
     const onSubmit = evt => {
@@ -32,12 +24,10 @@ export default function Login() {
                 console.error(err);
             })
             .finally(() => {
-                setFormValues(initialValues);
+                setFormValues(loginInitialValues);
                 push("/")
             })
     }
-
-
 
     return(
         <div className="login-container">
@@ -62,6 +52,7 @@ export default function Login() {
                         onChange={onChange}
                     />
                 </label>
+
             </div>
             <div className="login-button">
                 <button>Login</button>
@@ -69,7 +60,6 @@ export default function Login() {
         </form>
         </div>
             )
-
 }
 
 

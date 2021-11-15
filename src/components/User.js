@@ -1,16 +1,14 @@
 import React from "react";
 
 
-export default function Prices(props) {
-    const {} = props;
+export default function User(props) {
+    const { user } = props;
 
     return(
         <div>
-            <h2>Prices</h2>
+            <h2>User Name Here</h2>
         </div>
     )
-
-
 }
 
 
