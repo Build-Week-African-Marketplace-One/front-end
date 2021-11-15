@@ -7,7 +7,8 @@ const product1 = {
 const product2 = {
 
     productName: "Banana",
-    productPrice: "$10",
+    productDescription: "kjdg",
+    productPrice: "$10"
 
 }
 const product3 = {
