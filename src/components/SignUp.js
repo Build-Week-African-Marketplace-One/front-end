@@ -3,14 +3,27 @@ import {Link, NavLink} from "react-router-dom";
 import styled from "styled-components";
 import {signupInitialValues} from "../initialValues/InitialValues";
 import "../styles/SignUp.css"
-
+import * as yup from 'yup';
+import { initialFormErrors } from '../initialValues/InitialValues';
+import { formSchema } from '../validations/formSchema';
 
 export default function SignUp() {
     const [formValues, setFormValues] = useState(signupInitialValues);
+    const [formErrors, setFormErrors] = useState(initialFormErrors);
 
+    const validation = (name, value) => {
+      yup.reach(formSchema, name)
+      .validate(value)
+      .then(() => {
+        setFormErrors({...formErrors, [name]: ''});
+      })
+      .catch(err => {
+        setFormErrors({...formErrors, [name]: err.errors[0]});
+      })
+    }
 
     const onChange = evt => {
-        console.log(evt.target.value)
+        validation(evt.target.name, evt.target.value);
         setFormValues({
             ...formValues,
             [evt.target.name]: evt.target.value
@@ -33,6 +46,15 @@ export default function SignUp() {
                     </a>
                 </div>
                 <div className="signup-input-container">
+                    <div className='form-errors'>
+                      <p>{formErrors.username}</p>
+                      <p>{formErrors.firstName}</p>
+                      <p>{formErrors.lastName}</p>
+                      <p>{formErrors.businessName}</p>
+                      <p>{formErrors.jobTitle}</p>
+                      <p>{formErrors.avatarImg}</p>
+                      <p>{formErrors.password}</p>
+                    </div>
                     <label htmlFor="username">Username:&nbsp;</label>
                         <input
                             type="text"
@@ -91,50 +113,3 @@ export default function SignUp() {
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

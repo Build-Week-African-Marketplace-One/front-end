@@ -6,7 +6,6 @@ export default function NewProduct(props) {
     const { setIsToggled, isToggled } = props;
     const [newProduct, setNewProduct] = useState(newInitialValues);
     const [formValues, setFormValues] = useState();
-
     const postNewProduct = (newProduct) => {
 
         axios.post('', newProduct)
