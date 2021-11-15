@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import NewProduct from "./NewProduct";
-import {findAllByDisplayValue} from "@testing-library/react";
+
 
 export default function User(props) {
     const { user } = props;
@@ -15,9 +15,10 @@ export default function User(props) {
             <div>
             <div className="user-info">
                 <h2>User Name Here</h2>
-                <p>Export Exec</p>
+                <p>World Commodities Inc.</p>
+                <p>CEO</p>
             </div>
-                <button onClick={onClick}>New Product</button>
+                <button onClick={onClick}>Add New Product</button>
             </div>
         {
             isToggled && <NewProduct setIsToggled={setIsToggled} isToggled={isToggled}/>
