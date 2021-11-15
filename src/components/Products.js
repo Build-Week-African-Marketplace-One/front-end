@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import { pricesInitialValues } from "../initialValues/InitialValues";
 import axios from "axios";
 
-import Price from "./Price";
+import Product from "./Product";
 
 
-export default function Prices() {
+export default function Products() {
     const [prices, setPrices] = useState(pricesInitialValues);
 
     useEffect(() => {
@@ -23,7 +23,7 @@ export default function Prices() {
         <div>
             {
                 prices.map((price, i) => {
-                    return <Price key={i} price={price}  />
+                    return <Product key={i} price={price}  />
                 })
             }
         </div>

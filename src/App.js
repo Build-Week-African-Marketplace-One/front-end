@@ -6,7 +6,7 @@ import SignUp from "./components/SignUp";
 import Home from "./components/Home";
 import Header from "./components/Header";
 import Login from "./components/Login";
-import Prices from "./components/Prices";
+import Products from "./components/Products";
 import User from "./components/User";
 
 
@@ -20,7 +20,7 @@ function App() {
         <Switch>
           <Route path="/user" component={User}/>
           <Route path="/signup" component={SignUp} />
-          <Route path="/prices" component={Prices}/>
+          <Route path="/prices" component={Products}/>
           <Route path="/login" component={Login}/>
           <Route exact path="/" component={Home}/>
         </Switch>

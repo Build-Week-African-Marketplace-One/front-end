@@ -52,7 +52,7 @@ const formSchema = yup.object().shape({
     productPrice: yup
                     .string()
                     .trim()
-                    .min(3, "Product Price must be at least 3 characters")
+                    .min(3, "Product Product must be at least 3 characters")
                     .required("A Product is required"),
     location:yup
                 .string()
@@ -63,7 +63,7 @@ const formSchema = yup.object().shape({
 export default formSchema;
 
 
-export default formSchema;
+
 
 
 
