@@ -6,6 +6,7 @@ export default function NewProduct(props) {
     const { setIsToggled, isToggled } = props;
     const [newProduct, setNewProduct] = useState(newInitialValues);
     const [formValues, setFormValues] = useState();
+
     const postNewProduct = (newProduct) => {
 
         axios.post('', newProduct)
@@ -39,7 +40,7 @@ export default function NewProduct(props) {
           productName: formValues.productName,
           productDescription: formValues.productDescription,
           productPrice: formValues.productPrice,
-          
+          location: formValues.location
         }
 
         postNewProduct(newProduct);
@@ -72,6 +73,13 @@ export default function NewProduct(props) {
                     name="productPrice"
                     onChange={onChange}
                 />
+                <label htmlFor="location">&nbsb;Location:&nbsp;</label>
+                <select name='location' onChange={onChange} value={formValues.location}>
+                    <option value=''>Select a Region</option>
+                    <option value='North-Africa'>North Africa</option>
+                    <option value='Central-Africa'>Central Africa</option>
+                    <option value='South-Africa'>South Africa</option>
+                </select>
                 
             </div>
             <button>Submit</button>
