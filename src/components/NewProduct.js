@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {newInitialValues} from "../initialValues/InitialValues";
+import {newInitialValues, initialFormErrors} from "../initialValues/InitialValues";
 import axios from 'axios';
 import schema from "../validations/formSchema";
 import * as yup from "yup";
@@ -7,8 +7,8 @@ import * as yup from "yup";
 export default function NewProduct(props) {
     const { setIsToggled, isToggled } = props;
     const [newProduct, setNewProduct] = useState(newInitialValues);
-    const [formValues, setFormValues] = useState({});
-    const [formErrors, setFormErrors] = useState({})
+    const [formValues, setFormValues] = useState(newInitialValues);
+    const [formErrors, setFormErrors] = useState(initialFormErrors);
 
     const postNewProduct = (newProduct) => {
 
@@ -62,9 +62,6 @@ export default function NewProduct(props) {
         postNewProduct(newProduct);
     }
 
-
-
-
     return(
         <form className="new-product-container" onSubmit={onSubmit}>
             <div className="new-product-header">
@@ -95,18 +92,15 @@ export default function NewProduct(props) {
                     name="productPrice"
                     onChange={onChange}
                 />
-                <label htmlFor="location">&nbsb;Location:&nbsp;</label>
+                <label htmlFor="location">&nbsp;Location:&nbsp;</label>
                 <select name='location' onChange={onChange} value={formValues.location}>
                     <option value=''>Select a Region</option>
                     <option value='North-Africa'>North Africa</option>
                     <option value='Central-Africa'>Central Africa</option>
                     <option value='South-Africa'>South Africa</option>
                 </select>
-                
             </div>
             <button>Submit</button>
-
-
         </form>
     )
 
