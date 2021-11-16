@@ -9,6 +9,8 @@ import Login from "./components/Login";
 import Products from "./components/Products";
 import User from "./components/User";
 
+import PrivateRoute from './components/PrivateRoute';
+
 
 function App() {
 
@@ -18,9 +20,9 @@ function App() {
     <div className="App">
       <Header/>
         <Switch>
-          <Route path="/user" component={User}/>
+          <PrivateRoute path="/user" component={User}/>
           <Route path="/signup" component={SignUp} />
-          <Route path="/products" component={Products}/>
+          <PrivateRoute path="/products" component={Products}/>
           <Route path="/login" component={Login}/>
           <Route exact path="/" component={Home}/>
         </Switch>
