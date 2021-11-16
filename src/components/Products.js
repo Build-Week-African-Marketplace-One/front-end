@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { pricesInitialValues } from "../initialValues/InitialValues";
 import axios from "axios";
-
 import Product from "./Product";
+import "../styles/Products.css";
 
 
 export default function Products() {
@@ -20,7 +20,7 @@ export default function Products() {
 
 
     return(
-        <div>
+        <div className="products-container">
             {
                 prices.map((price, i) => {
                     return <Product key={i} price={price}  />
