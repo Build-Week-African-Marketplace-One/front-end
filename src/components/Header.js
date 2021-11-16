@@ -8,7 +8,6 @@ export default function Header() {
         window.location.href = "/" ;
     }
 
-
     return(
         <div className="header">
             <nav className="header-navs">
@@ -17,7 +16,8 @@ export default function Header() {
                 <Link to="/products" style={{ textDecoration: 'none', color: 'lightgrey' }}>Products</Link>
                 <Link to="/user" style={{ textDecoration: 'none', color: 'lightgrey' }}>User</Link>
                 <Link to="/signup" style={{ textDecoration: 'none', color: 'lightgrey' }}>Sign Up</Link>
-                <a href="/" onClick={logout} style={{ textDecoration: 'none', color: 'lightgrey' }} >Logout</a>
+                {localStorage.getItem("token") &&
+                    <a href="/" onClick={logout} style={{textDecoration: 'none', color: 'lightgrey'}}>Logout</a>}
             </nav>
         </div>
     )

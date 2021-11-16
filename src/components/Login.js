@@ -14,9 +14,10 @@ export default function Login() {
         });
     };
 
-    const onSubmit = evt => {
+
+    const onSubmit = (evt) => {
         evt.preventDefault();
-        axios.post("https://")
+        axios.post("https://", formValues)
             .then(res => {
                 console.log(res.data.token);
             })
@@ -28,6 +29,7 @@ export default function Login() {
                 push("/")
             })
     }
+
 
     return(
         <div className="login-container">
