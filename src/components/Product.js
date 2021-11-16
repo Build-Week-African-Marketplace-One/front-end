@@ -1,6 +1,8 @@
+
 import React, {useState} from "react";
 import "../styles/Product.css"
 import ProductInfo from "./ProductInfo";
+
 
 
 export default function Product(props) {
