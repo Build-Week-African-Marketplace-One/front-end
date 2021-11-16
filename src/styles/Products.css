@@ -1,13 +1,13 @@
-.products-container {
+.products-map {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-
-
-
-
+.locations {
+    display: flex;
+    justify-content: space-around;
+}
 
 
 

@@ -1,4 +1,3 @@
-
 import React, {useState} from "react";
 import "../styles/Product.css"
 import ProductInfo from "./ProductInfo";
@@ -11,7 +10,6 @@ export default function Product(props) {
 
     const onClick = evt => {
         setIsToggled(!isToggled);
-        console.log(isToggled);
     }
 
     return(
@@ -19,12 +17,11 @@ export default function Product(props) {
             <h1 onClick={onClick}>
                 {price.productName}
             </h1>
-            {
-                isToggled && <ProductInfo price={price}/>
-            }
+            {isToggled && <ProductInfo price={price}/>}
         </div>
     )
 }
+
 
 
 
