@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { pricesInitialValues } from "../initialValues/InitialValues";
 import axios from "axios";
 import Product from "./Product";
 import {productArray} from "../initialValues/InitialValues";
 import "../styles/Products.css";
-import ProductInfo from "./ProductInfo";
 
 
 export default function Products() {
@@ -40,8 +38,6 @@ export default function Products() {
         setIsNorthToggled(false);
         setIsCentralToggled(false);
     }
-
-
 
     return(
         <div className="products-container">

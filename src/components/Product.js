@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import "../styles/Product.css"
 import ProductInfo from "./ProductInfo";
-import {productArray} from "../initialValues/InitialValues";
 
 
 
