@@ -1,73 +1,100 @@
 const product1 = {
-
     productName: "Banana",
-    productDescription: "Stuff and stuff",
     productPrice: "$10",
-    location: 'North Africa'
+    location: 'North Africa',
+    productDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod" +
+        " tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud" +
+        " exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor" +
+        " in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint" +
+        " occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 };
 
 const product2 = {
-
     productName: "Banana",
-    productDescription: "Stuff and stuff",
     productPrice: "$10",
-    location: 'South Africa'
+    location: 'South Africa',
+    productDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod" +
+        " tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud" +
+        " exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor" +
+        " in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint" +
+        " occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 };
 
 const product3 = {
-
     productName: "Banana",
-    productDescription: "Stuff and stuff",
     productPrice: "$10",
-    location: 'Central Africa'
+    location: 'Central Africa',
+    productDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod" +
+        " tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud" +
+        " exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor" +
+        " in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint" +
+        " occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 };
 
 const product4 = {
-
     productName: "Banana",
-    productDescription: "Stuff and stuff",
     productPrice: "$10",
-    location: 'Central Africa'
+    location: 'Central Africa',
+    productDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod" +
+        " tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud" +
+        " exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor" +
+        " in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint" +
+        " occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 };
 
 const product5 = {
-
     productName: "Banana",
-    productDescription: "Stuff and stuff",
     productPrice: "$10",
-    location: 'Central Africa'
+    location: 'Central Africa',
+    productDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod" +
+        " tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud" +
+        " exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor" +
+        " in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint" +
+        " occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 };
 
 const product6= {
-
     productName: "Banana",
-    productDescription: "Stuff and stuff",
     productPrice: "$10",
-    location: 'Central Africa'
+    location: 'Central Africa',
+    productDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod" +
+        " tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud" +
+        " exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor" +
+        " in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint" +
+        " occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 };
 
 const product7 = {
-
     productName: "Banana",
-    productDescription: "Stuff and stuff",
     productPrice: "$10",
-    location: 'Central Africa'
+    location: 'Central Africa',
+    productDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod" +
+        " tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud" +
+        " exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor" +
+        " in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint" +
+        " occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 };
 
 const product8 = {
-
     productName: "Banana",
-    productDescription: "Stuff and stuff",
     productPrice: "$10",
-    location: 'Central Africa'
+    location: 'Central Africa',
+    productDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod" +
+        " tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud" +
+        " exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor" +
+        " in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint" +
+        " occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 };
 
 const product9 = {
-
     productName: "Banana",
-    productDescription: "Stuff and stuff",
     productPrice: "$10",
-    location: 'Central Africa'
+    location: 'Central Africa',
+    productDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod" +
+        " tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud" +
+        " exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor" +
+        " in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint" +
+        " occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 };
 
 export const pricesInitialValues = [product1, product2, product3, product4, product5,

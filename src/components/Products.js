@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { pricesInitialValues } from "../initialValues/InitialValues";
 import axios from "axios";
-
 import Product from "./Product";
-import "../styles/Products.css"
+
+import "../styles/Products.css";
+
 
 export default function Products() {
     const [prices, setPrices] = useState(pricesInitialValues);
