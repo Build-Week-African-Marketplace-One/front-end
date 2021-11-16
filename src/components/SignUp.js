@@ -13,7 +13,7 @@ export default function SignUp() {
 
 
     const postNewUser = newUser => {
-        axios.post("https://")
+        axios.post("https://", newUser)
              .then(res => {
                 setFormValues(signupInitialValues);
              })
@@ -43,7 +43,6 @@ export default function SignUp() {
             ...formValues,
             [evt.target.name]: evt.target.value
         });
-        console.log(formValues);
     };
 
     const formSubmit = () => {

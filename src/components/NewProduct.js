@@ -58,7 +58,6 @@ export default function NewProduct(props) {
           productPrice: formValues.productPrice,
           location: formValues.location
         }
-
         postNewProduct(newProduct);
     }
 
