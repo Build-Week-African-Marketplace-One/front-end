@@ -14,7 +14,7 @@ export default function Header() {
             <nav className="header-navs">
                 <Link to="/" style={{ textDecoration: 'none', color: 'lightgrey' }}  >Home</Link>
                 <Link to="/login" style={{ textDecoration: 'none', color: 'lightgrey' }}>Login</Link>
-                <Link to="/prices" style={{ textDecoration: 'none', color: 'lightgrey' }}>Prices</Link>
+                <Link to="/products" style={{ textDecoration: 'none', color: 'lightgrey' }}>Products</Link>
                 <Link to="/user" style={{ textDecoration: 'none', color: 'lightgrey' }}>User</Link>
                 <Link to="/signup" style={{ textDecoration: 'none', color: 'lightgrey' }}>Sign Up</Link>
                 <a href="/" onClick={logout} style={{ textDecoration: 'none', color: 'lightgrey' }} >Logout</a>
