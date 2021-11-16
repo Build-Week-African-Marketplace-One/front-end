@@ -4,10 +4,27 @@ import "../styles/SignUp.css"
 import * as yup from 'yup';
 import { initialFormErrors } from '../initialValues/InitialValues';
 import  schema  from '../validations/formSchema';
+import axios from "axios";
 
 export default function SignUp() {
     const [formValues, setFormValues] = useState(signupInitialValues);
     const [formErrors, setFormErrors] = useState(initialFormErrors);
+    const values = formValues;
+
+
+    const postNewUser = newUser => {
+        axios.post("https://")
+             .then(res => {
+                setFormValues(signupInitialValues);
+             })
+            .catch(err => {
+                console.error(err);
+            })
+            .finally(() => {
+                window.location.href = "/";
+            })
+    }
+
 
     const validation = (name, value) => {
       yup.reach(schema, name)
@@ -29,9 +46,23 @@ export default function SignUp() {
         console.log(formValues);
     };
 
+    const formSubmit = () => {
+        const newUser ={
+            username: values.username.trim(),
+            firstName: values.firstName.trim(),
+            lastName: values.lastName.trim(),
+            businessName: values.businessName.trim(),
+            jobTitle: values.jobTitle.trim(),
+            avatarImg: values.avatarImg.trim(),
+            password: values.password.trim()
+        };
+        postNewUser(newUser);
+
+    };
+
     const onSubmit = evt => {
         evt.preventDefault();
-        console.log(formValues)
+        formSubmit();
     }
 
     return (

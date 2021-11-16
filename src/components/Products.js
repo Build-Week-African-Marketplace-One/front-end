@@ -3,11 +3,11 @@ import { pricesInitialValues } from "../initialValues/InitialValues";
 import axios from "axios";
 
 import Product from "./Product";
-
+import "../styles/Products.css"
 
 export default function Products() {
     const [prices, setPrices] = useState(pricesInitialValues);
-
+    console.log(prices)
     useEffect(() => {
         axios.get("https://")
             .then(res => {
@@ -20,7 +20,7 @@ export default function Products() {
 
 
     return(
-        <div>
+        <div className="products-container">
             {
                 prices.map((price, i) => {
                     return <Product key={i} price={price}  />
