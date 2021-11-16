@@ -8,8 +8,12 @@ export default function ProductInfo(props) {
     return(
         <div className="info-container">
             <img src="https://images.unsplash.com/photo-1594489428504-5c0c480a15fd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=764&q=80" alt="banana"/>
-            <p>{price.productDescription}</p>
-            <p>{price.productPrice}</p>
+            <p className="product-description">
+                {price.productDescription}
+            </p>
+            <p className="product-price">
+                {price.productPrice}
+            </p>
         </div>
     )
 

@@ -6,7 +6,13 @@ export default function Header() {
     const logout = () => {
         localStorage.removeItem("token");
         window.location.href = "/" ;
-    }
+    };
+
+    const token =()=>{
+        localStorage.setItem("token", "token");
+    };
+
+    token();
 
     return(
         <div className="header">
@@ -23,7 +29,6 @@ export default function Header() {
             </nav>
         </div>
     )
-
 }
 
 

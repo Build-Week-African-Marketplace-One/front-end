@@ -14,7 +14,7 @@ export default function Product(props) {
 
     return(
         <div className="product-container">
-            <h1 onClick={onClick}>
+            <h1 onClick={onClick} className="product-name">
                 {price.productName}
             </h1>
             {isToggled && <ProductInfo price={price}/>}
