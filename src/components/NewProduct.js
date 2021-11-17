@@ -6,24 +6,20 @@ import * as yup from "yup";
 
 export default function NewProduct(props) {
     const { setIsToggled, isToggled } = props;
-    const [newProduct, setNewProduct] = useState(newInitialValues);
     const [formValues, setFormValues] = useState(newInitialValues);
     const [formErrors, setFormErrors] = useState(initialFormErrors);
 
     const postNewProduct = (newProduct) => {
 
-        axios.post('', newProduct)
+        axios.post("https://", newProduct)
             .then(res => {
                 console.log(res.data);
-                setNewProduct(newProduct);
+                setFormValues(newInitialValues);
+                setIsToggled(!isToggled);
             })
             .catch(err => {
                 console.error(err);
             })
-            .finally(() =>{
-                setFormValues(newInitialValues);
-                setIsToggled(!isToggled);
-            });
     };
 
     const validation = (name, value) => {
@@ -102,5 +98,5 @@ export default function NewProduct(props) {
             <button>Submit</button>
         </form>
     )
-
 }
+//dfg
