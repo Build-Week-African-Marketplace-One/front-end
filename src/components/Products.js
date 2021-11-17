@@ -7,11 +7,11 @@ import "../styles/Products.css";
 
 export default function Products() {
     const [prices, setPrices] = useState(productArray);
-    const [isNorthToggled, setIsNorthToggled] = useState(false)
-    const [isCentralToggled, setIsCentralToggled] = useState(false)
-    const [isSouthToggled, setIsSouthToggled] = useState(false)
+    const [isNorthToggled, setIsNorthToggled] = useState(false);
+    const [isCentralToggled, setIsCentralToggled] = useState(false);
+    const [isSouthToggled, setIsSouthToggled] = useState(false);
 
-    console.log(prices)
+
     useEffect(() => {
         axios.get("https://")
             .then(res => {
@@ -21,6 +21,7 @@ export default function Products() {
                 console.error(err)
             })
     }, []);
+
 
     const onClickNorth = evt => {
         setIsNorthToggled(!isNorthToggled);
@@ -71,10 +72,8 @@ export default function Products() {
             }
             </div>
         </div>
-    )
-
-
-}
+    );
+};
 
 
 
