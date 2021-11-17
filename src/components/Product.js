@@ -1,8 +1,6 @@
 import React, {useState} from "react";
-import "../styles/Product.css"
+import "../styles/Product.css";
 import ProductInfo from "./ProductInfo";
-
-
 
 export default function Product(props) {
     const [isToggled, setIsToggled] = useState(false);
@@ -19,8 +17,8 @@ export default function Product(props) {
             </h1>
             {isToggled && <ProductInfo price={price}/>}
         </div>
-    )
-}
+    );
+};
 
 
 
