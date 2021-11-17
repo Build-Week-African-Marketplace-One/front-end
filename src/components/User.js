@@ -3,6 +3,7 @@ import NewProduct from "./NewProduct";
 import {newUser} from "../initialValues/InitialValues";
 import axiosWithAuth from "./axiosWithAuth/axiosWithAuth";
 import UserInfo from "./UserInfo";
+import "../styles/User.css"
 
 
 export default function User(props) {
@@ -21,7 +22,6 @@ export default function User(props) {
                         })
     },[]);
 
-
    const onClick = evt => {
         setIsToggled(!isToggled);
         setUserToggle(false);
@@ -36,7 +36,6 @@ export default function User(props) {
         setUserToggle(false);
         setIsToggled(false);
     }
-
 
     return(
             <div>

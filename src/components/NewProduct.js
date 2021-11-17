@@ -4,6 +4,7 @@ import axios from 'axios';
 import schema from "../validations/formSchema";
 import * as yup from "yup";
 
+
 export default function NewProduct(props) {
     const { setIsToggled, isToggled } = props;
     const [formValues, setFormValues] = useState(newInitialValues);
@@ -32,7 +33,6 @@ export default function NewProduct(props) {
                 setFormErrors({...formErrors, [name]: err.errors[0]});
             });
     };
-
 
     const onChange = evt => {
         inputChange(evt.target.name, evt.target.value);
@@ -99,12 +99,4 @@ export default function NewProduct(props) {
         </form>
     );
 };
-// https://images.unsplash.com/photo-1605319760321-91c129fd463a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlf
-//       // Hx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80
-
-// https://images.unsplash.com/photo-1598357850706-0188bc0372b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwa
-// // G90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80
-
-// https://images.unsplash.com/photo-1584611936667-709b89b7e942?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDV8fG1hcmtldH
-// // xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60
 

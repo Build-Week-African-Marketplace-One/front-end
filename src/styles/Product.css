@@ -2,9 +2,13 @@
     width: 30%;
     padding: 2%;
     margin: 1%;
+    /*border: red 1px solid;*/
 }
 
-
+.regions {
+    /*border: 1px red solid;*/
+    margin-top: 5%;
+}
 
 
 
