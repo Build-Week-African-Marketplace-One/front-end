@@ -99,4 +99,3 @@ export default function NewProduct(props) {
         </form>
     )
 }
-//dfg
