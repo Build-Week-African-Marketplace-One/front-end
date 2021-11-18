@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import {newInitialValues, initialFormErrors} from "../initialValues/InitialValues";
-import axios from 'axios';
 import schema from "../validations/formSchema";
 import * as yup from "yup";
+import axiosWithAuth from "./axiosWithAuth/axiosWithAuth";
 
 
 export default function NewProduct(props) {
@@ -12,7 +12,8 @@ export default function NewProduct(props) {
 
     const postNewProduct = (newProduct) => {
 
-        axios.post("https://", newProduct)
+        axiosWithAuth()
+            .post("https://", newProduct)
             .then(res => {
                 console.log(res.data);
                 setFormValues(newInitialValues);
