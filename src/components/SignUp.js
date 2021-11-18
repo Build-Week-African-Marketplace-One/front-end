@@ -23,7 +23,7 @@ export default function SignUp() {
             .finally(() => {
                 window.location.href = "/";
             })
-    }
+    };
 
 
     const validation = (name, value) => {
@@ -35,7 +35,7 @@ export default function SignUp() {
       .catch(err => {
         setFormErrors({...formErrors, [name]: err.errors[0]});
       })
-    }
+    };
 
     const onChange = evt => {
         validation(evt.target.name, evt.target.value);
@@ -62,7 +62,7 @@ export default function SignUp() {
     const onSubmit = evt => {
         evt.preventDefault();
         formSubmit();
-    }
+    };
 
     return (
         <div className="signup-container">
@@ -138,6 +138,4 @@ export default function SignUp() {
         </div>
 
     )
-
-
-}
+};
