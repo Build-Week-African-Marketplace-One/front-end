@@ -42,20 +42,20 @@ export default function User(props) {
                 <div className="user-img">
                     <img src={user.avatarImg} alt="James Howlett"/>
                 </div>
-            <div className="user-info">
+                <div className="user-info">
 
-                <h2 onClick={reset}>{user.username}</h2>
-                <button onClick={infoOnClick}>Profile Details</button>
-                <button onClick={onClick}>Add New Product</button>
-            </div>
-            <div className="details-buttons">
-            {
-                userInfoToggle && <UserInfo user={user}/>
-            }
-        {
-            isToggled && <NewProduct setIsToggled={setIsToggled} isToggled={isToggled}/>
-        }
-            </div>
+                    <h2 onClick={reset}>{user.username}</h2>
+                    <button onClick={infoOnClick}>Profile Details</button>
+                    <button onClick={onClick}>Add New Product</button>
+                </div>
+                <div className="details-buttons">
+                {
+                    userInfoToggle && <UserInfo user={user}/>
+                }
+                {
+                    isToggled && <NewProduct setIsToggled={setIsToggled} isToggled={isToggled}/>
+                }
+                </div>
         </div>
     );
 };

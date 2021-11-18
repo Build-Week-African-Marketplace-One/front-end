@@ -4,7 +4,7 @@ import "../styles/SignUp.css"
 import * as yup from 'yup';
 import { initialFormErrors } from '../initialValues/InitialValues';
 import  schema  from '../validations/formSchema';
-import axios from "axios";
+import axiosWithAuth from "./axiosWithAuth/axiosWithAuth";
 
 export default function SignUp() {
     const [formValues, setFormValues] = useState(signupInitialValues);
@@ -13,7 +13,8 @@ export default function SignUp() {
 
 
     const postNewUser = newUser => {
-        axios.post("https://", newUser)
+        axiosWithAuth()
+             .post("https://", newUser)
              .then(res => {
                 setFormValues(signupInitialValues);
              })
@@ -24,7 +25,6 @@ export default function SignUp() {
                 window.location.href = "/";
             })
     };
-
 
     const validation = (name, value) => {
       yup.reach(schema, name)
@@ -56,7 +56,6 @@ export default function SignUp() {
             password: values.password.trim()
         };
         postNewUser(newUser);
-
     };
 
     const onSubmit = evt => {
@@ -136,6 +135,5 @@ export default function SignUp() {
                 <button>Submit</button>
             </form>
         </div>
-
     )
 };
