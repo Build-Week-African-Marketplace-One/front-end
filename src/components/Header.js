@@ -17,19 +17,21 @@ export default function Header() {
     return(
         <div className="header">
             <nav className="header-navs">
-                <Link to="/" style={{ textDecoration: 'none', color: 'lightgrey' }}  >Home</Link>
+                <Link id="home" to="/"   >Home</Link>
+
+                <Link id="products" to="/products" >Products</Link>
                 {!localStorage.getItem("token") &&
-                    <Link to="/login" style={{textDecoration: 'none', color: 'lightgrey'}}>Login</Link>}
-                <Link to="/products" style={{ textDecoration: 'none', color: 'lightgrey' }}>Products</Link>
-                <Link to="/user" style={{ textDecoration: 'none', color: 'lightgrey' }}>User</Link>
-                {!localStorage.getItem("token") &&
-                    <Link to="/signup" style={{textDecoration: 'none', color: 'lightgrey'}}>Sign Up</Link>}
+                <Link id="login" to="/login">Login</Link>}
                 {localStorage.getItem("token") &&
-                    <a href="/" onClick={logout} style={{textDecoration: 'none', color: 'lightgrey'}}>Logout</a>}
+                    <Link id="user" to="/user">User</Link>}
+                {!localStorage.getItem("token") &&
+                    <Link id="signup" to="/signup">Sign Up</Link>}
+                {localStorage.getItem("token") &&
+                    <a id="logout" href="/" onClick={logout}>Logout</a>}
             </nav>
         </div>
     )
-}
+};
 
 
 

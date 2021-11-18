@@ -4,18 +4,37 @@
     align-items: center;
 }
 
-a:hover {
-    font-size: 1.2rem;
+a {
+    flex: 1;
+    background-color: #282c34;
+    padding: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    transition: all .8s ease-out;
+}
+
+a:hover,
+a:focus {
+    background-color: #fff;
+    color: #333;
 }
 
 button {
-    background-color: transparent;
+    /*background-color: transparent;*/
     border: none;
     color: lightgray;
+    flex: 1;
+    background-color: #282c34;
+    padding: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    transition: all .8s ease-out;
 }
 
-button:hover {
-    font-size: 1rem;
+button:hover,
+button:hover{
+    background-color: #fff;
+    color: #333;
 }
 
 
