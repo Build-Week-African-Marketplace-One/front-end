@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import {signupInitialValues} from "../initialValues/InitialValues";
+import { signupInitialValues, initialFormErrors } from "../initialValues/InitialValues";
 import "../styles/SignUp.css"
 import * as yup from 'yup';
-import { initialFormErrors } from '../initialValues/InitialValues';
 import  schema  from '../validations/formSchema';
 import axiosWithAuth from "./axiosWithAuth/axiosWithAuth";
 
