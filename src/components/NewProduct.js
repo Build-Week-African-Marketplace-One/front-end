@@ -9,6 +9,7 @@ export default function NewProduct(props) {
     const { setIsToggled, isToggled } = props;
     const [formValues, setFormValues] = useState(newInitialValues);
     const [formErrors, setFormErrors] = useState(initialFormErrors);
+    const values = formValues;
 
     const postNewProduct = (newProduct) => {
 
@@ -74,22 +75,25 @@ export default function NewProduct(props) {
                 <input
                     type="text"
                     name="productName"
+                    value={values.productName}
                     onChange={onChange}
                 />
                 <label htmlFor="productDescription">&nbsp;Description:&nbsp;</label>
                 <input
                     type="text"
                     name="productDescription"
+                    value={values.productDescription}
                     onChange={onChange}
                 />
                 <label htmlFor="productPrice">&nbsp;Price:&nbsp;</label>
                 <input
                     type="text"
                     name="productPrice"
+                    value={values.productPrice}
                     onChange={onChange}
                 />
                 <label htmlFor="location">&nbsp;Location:&nbsp;</label>
-                <select name='location' onChange={onChange} value={formValues.location}>
+                <select name='location' onChange={onChange} value={values.location}>
                     <option value=''>Select a Region</option>
                     <option value='North-Africa'>North Africa</option>
                     <option value='Central-Africa'>Central Africa</option>

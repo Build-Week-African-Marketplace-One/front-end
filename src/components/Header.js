@@ -8,11 +8,6 @@ export default function Header() {
         window.location.href = "/" ;
     };
 
-    const token =()=>{
-        localStorage.setItem("token", "token");
-    };
-
-    token();
 
     return(
         <div className="header">

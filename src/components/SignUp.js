@@ -87,6 +87,7 @@ export default function SignUp() {
                             type="text"
                             name="username"
                             id="username"
+                            value={values.username}
                             onChange={onChange}
                         />
                     <label htmlFor="firstName">First Name:&nbsp;</label>
@@ -94,6 +95,7 @@ export default function SignUp() {
                         type="text"
                         name="firstName"
                         id="firstName"
+                        value={values.firstName}
                         onChange={onChange}
                     />
                     <label htmlFor="lastName">Last Name:&nbsp;</label>
@@ -101,6 +103,7 @@ export default function SignUp() {
                         type="text"
                         name="lastName"
                         id="lastName"
+                        value={values.lastName}
                         onChange={onChange}
                     />
                     <label htmlFor="businessName">Business Name:&nbsp;</label>
@@ -108,6 +111,7 @@ export default function SignUp() {
                         type="text"
                         name="businessName"
                         id="businessName"
+                        value={values.businessName}
                         onChange={onChange}
                     />
                     <label htmlFor="jobTitle">Job Title:&nbsp;</label>
@@ -115,6 +119,7 @@ export default function SignUp() {
                         type="text"
                         name="jobTitle"
                         id="jobTitle"
+                        value={values.jobTitle}
                         onChange={onChange}
                     />
                     <label htmlFor="password">Password:&nbsp;</label>
@@ -122,6 +127,7 @@ export default function SignUp() {
                         type="text"
                         name="password"
                         id="password"
+                        value={values.password}
                         onChange={onChange}
                     />
                     {/*<label htmlFor="avatarImg">Profile Picture:&nbsp;</label>*/}

@@ -6,6 +6,7 @@ import {loginInitialValues} from "../initialValues/InitialValues";
 export default function Login() {
     const [formValues, setFormValues] = useState(loginInitialValues);
     const { push } = useHistory();
+    const values = formValues;
 
     const onChange = evt => {
         setFormValues({
@@ -17,7 +18,7 @@ export default function Login() {
     const onSubmit = (evt) => {
         evt.preventDefault();
         axiosWithAuth()
-            .post("https://", formValues)
+            .post("https://", values)
             .then(res => {
                 setFormValues(loginInitialValues);
             })
@@ -41,6 +42,7 @@ export default function Login() {
                             type="text"
                             name="username"
                             id="username"
+                            value={values.username}
                             onChange={onChange}
                         />
                     </label>
@@ -49,6 +51,7 @@ export default function Login() {
                             type="password"
                             name="password"
                             id="username"
+                            value={values.password}
                             onChange={onChange}
                         />
                     </label>
